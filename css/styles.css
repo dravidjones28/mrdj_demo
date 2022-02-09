@@ -162,6 +162,11 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 20px;
+  height: 20px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
 }
@@ -178,6 +183,12 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
+  width: 44px;
+  height: 44px;
 }
 
 /* buttons */
@@ -427,6 +438,8 @@ a {
   color: var(--color-heading);
   font-size: 2rem;
   opacity: 0.4;
+  font-style: normal;
+  margin-top: 0.1rem;
 }
 
 .quote__line {
@@ -445,5 +458,84 @@ a {
 
   .quote__company {
     font-size: 1.6rem;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial .quote {
+  font-size: 110%;
+}
+
+.testimonial .quote__author {
+  font-size: 2rem;
+}
+
+.testimonial .quote__company {
+  font-size: 1.2rem;
+}
+
+.testimonial .icon-container--accent {
+  position: absolute;
+  top: 20px;
+  right: -22px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote {
+    line-height: 1.5;
+  }
+
+  .testimonial .icon-container--accent {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 20px;
+    right: -32px;
+  }
+  .testimonial__image {
+    margin: 0;
+  }
+  .testimonial .quote {
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  .testimonial .quote {
+    font-size: 120%;
+  }
+
+  .testimonial .icon--small {
+    width: 30px;
+    height: 30px;
   }
 }
