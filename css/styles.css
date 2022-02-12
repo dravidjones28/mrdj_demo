@@ -142,6 +142,7 @@ a {
   margin-right: 2rem;
 }
 .list--tick {
+  font-size: 2.4rem;
   list-style-image: url(../icons/tick.svg);
   padding-left: 3rem;
 }
@@ -149,6 +150,12 @@ a {
 .list--tick .list__item {
   padding-left: 0.5rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .list--tick {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -337,9 +344,6 @@ a {
 }
 
 /* plans */
-.plan {
-  position: relative;
-}
 
 .plan__name {
   color: #fff;
@@ -375,6 +379,10 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
 }
 
 .plan--popular .card__header::before {
@@ -638,6 +646,7 @@ a {
 .block--dark {
   background-color: #000;
 }
+
 .block__header {
   text-align: center;
 }
@@ -793,3 +802,77 @@ a {
   }
 }
 
+/* Plans block */
+
+.block-plan .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plan .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-plan .plan {
+    margin: 4rem 2rem;
+  }
+
+  .block-plan .card {
+    transition: transform 0.15s;
+  }
+
+  .block-plan .card:hover {
+    transform: scale(1.1);
+  }
+
+  .block-plan .plan--popular {
+    transform: scale(1.1);
+    transition: transform 0.15s;
+  }
+
+  .block-plan .plan--popular:hover {
+    transform: scale(1.1);
+  }
+  .block-plan .btn {
+    font-size: 1.4rem;
+  }
+}
+
+/*  features*/
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin: 6rem 0;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+
+  .feature:nth-of-type(even) {
+    column-gap: 6rem;
+  }
+
+  .feature__heading {
+    font-size: 2.4rem;
+  }
+
+  .feature__description {
+    font-size: 1.8rem;
+  }
+
+  .feature .link-arrow {
+    font-size: 1.5rem;
+  }
+}
