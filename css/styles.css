@@ -208,6 +208,13 @@ a {
   white-space: nowrap;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 .btn--primary {
   background: var(--color-primary);
   color: #fff;
@@ -277,7 +284,7 @@ a {
 }
 
 .input-group {
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
 }
@@ -285,7 +292,8 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
+  width: 0rem;
 }
 
 .input-group .btn {
@@ -754,3 +762,34 @@ a {
     align-self: center;
   }
 }
+
+/* Domain Prices */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 10px #e6ebee;
+  max-width: 678px;
+  margin: 4rem auto;
+}
+
+.block-domain__prices {
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 6rem);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.block-domain .btn {
+  padding: 2rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    font-size: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
