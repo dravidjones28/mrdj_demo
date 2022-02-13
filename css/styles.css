@@ -305,7 +305,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
-  width: 0rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -511,7 +511,7 @@ a {
 
 .testimonial__image {
   position: relative;
-  margin: 0 3rem;
+  margin: 0 4rem;
 }
 
 .testimonial__image > img {
@@ -644,7 +644,7 @@ a {
 
 /* Blocks */
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
 }
 
@@ -682,6 +682,7 @@ a {
   max-width: 1140px;
   margin: 0 auto;
 }
+
 /* Navigation bar */
 
 .nav {
@@ -754,6 +755,10 @@ a {
 
 /* Hero */
 
+.hero h1 {
+  font-size: 6rem;
+}
+
 .hero__content {
   text-align: center;
 }
@@ -761,7 +766,8 @@ a {
 .hero__description {
   font-size: 2rem;
   color: #b9c3cf;
-  margin: 2rem 0 5rem;
+  margin: 2rem 0 3rem;
+  letter-spacing: 1px;
 }
 
 .hero__image {
@@ -802,6 +808,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .block.block-domain {
+    padding-bottom: 0;
+  }
   .block-domain__prices {
     font-size: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -820,6 +829,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .block.block-plan {
+    padding-top: 0;
+  }
   .block-plan .plan {
     margin: 4rem 2rem;
   }
@@ -971,7 +983,9 @@ a {
   margin-top: 3rem;
   font-size: 2rem;
 }
-
+.footer__sections {
+  margin-top: 6rem;
+}
 @media screen and (min-width: 768px) {
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -1007,4 +1021,9 @@ a {
     margin-top: 1.5rem;
     font-size: 1.5rem;
   }
+}
+
+/* callout-signup */
+.callout-signup {
+  transform: translateY(5rem);
 }
